@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rajkumartetrisgameapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rajkumartetrisgameapp
+  template:
+    metadata:
+      labels:
+        app: rajkumartetrisgameapp 
+    spec:
+      containers:
+        - name: rajkumartetrisgameapp 
+          image: azcor.azurecr.io/rajkumartetrisgameapp
+          ports:
+          - containerPort: 80
